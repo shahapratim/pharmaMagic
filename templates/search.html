@@ -1,0 +1,45 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<p>Find the available brand name & description by their generic name.</p>
+  <div class="container">
+    <form action="" methods="POST">
+      <div class="form-inline d-flex justify-content-center md-form form-sm mt-0">
+        <input type="text" name="drug" class="form-control" placeholder="Enter drug name">
+      
+      <button class="btn btn-outline-info" type="submit">Search</button></div>
+    </form>
+  
+  <div class="col-lg-4">
+          <div class="page-header">
+            <h3 id="tables">Drug Search Result</h3>
+          </div>
+          <div class="bs-component">
+            <table class="table table-hover">
+                <tr class="table-active">
+                  <th scope="col">Brand Name</th>
+                  <th scope="col">Pharmacology</th>
+                </tr>
+                <tr>
+                    <td scope="row"> 
+                      {% if brand_name%}
+                   {{brand_name}}
+                   {% else %}
+                    Brand Name goes here
+                    {% endif %}
+                    </td>
+                    <td> 
+                       
+                        {% if brand_name%}
+                   {{pharmacology}}
+                   {% else %}
+                    Pharmacology goes here
+                    {% endif %}
+                  </td>
+                  </tr>
+            </table> 
+        </div>
+      </div>
+    </div>
+
+    {% endblock content %}

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        {% if title %}
+        <title>PharmaMagic - {{ title }}</title>
+    {% else %}
+        <title>PharmaMagic</title>
+    {% endif %}
+
+    <!-- font awesome cdn  -->
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
+        integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+
+    <!-- custom css  -->
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+    <!-- bootstrap cdn  -->
+
+    <!-- CSS only -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <!-- JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+
+
+</head>
+
+<body>
+    <header>
+        <h1 class="name"><i class="fas fa-stethoscope"></i> PharmaMagic</h1>
+
+        <div class="carousel">
+            <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="d-block w-100">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <p>
+                                        Welcome to pharmaMagic. The world of medicine. Everything you want to know about the drug and all the available brand name in your country are all in one place. 
+
+                                    </p>
+
+
+                                </div>
+                                <div class="col-md-6">
+                                    <img src="./assets/3.svg" class="c-img" alt="">
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="d-block w-100">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <p>
+                                        Search with the generic name of your desired drug to know indications, contraindications, side-effects,dosing of the drugs and all the available brand names of the drug available in Bangladesh.
+
+                                    </p>
+
+
+                                </div>
+                                <div class="col-md-6">
+                                    <img src="./assets/5.svg" class="c-img" alt="">
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="d-block w-100">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <p>
+                                        Prescription reader helps you find the medicine name that might seems difficult for you to read. All you have to do is crop the prescription and keep the medicines name only and then upload the prescipton. PharmaMagic will do the rest and provide you the medicine name in plain text. Simple Enough! 
+
+                                    </p>
+
+
+                                </div>
+                                <div class="col-md-6">
+                                    <img src="./assets/2.svg" class="c-img" alt="">
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- buttons  -->
+        <div class="buttons">
+            <a href="{{ url_for('register') }}">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                sign up !
+            </a>
+            <a href="{{ url_for('login') }}">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                sign in
+            </a>
+            
+        </div>
+
+
+
+    </header>
+
+</body>
+
+</html>
